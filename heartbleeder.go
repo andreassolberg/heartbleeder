@@ -17,7 +17,7 @@ import (
 var defaultTLSConfig = tls.Config{InsecureSkipVerify: true}
 
 func main() {
-	timeout := flag.Duration("timeout", 5*time.Second, "Timeout after sending heartbeat")
+	timeout := flag.Duration("timeout", 1*time.Second, "Timeout after sending heartbeat")
 	pg := flag.Bool("pg", false, "run a check specific to Postgres TLS")
 	flag.Usage = func() {
 		fmt.Printf("Usage: %s [options] host[:443]\n", os.Args[0])
